@@ -1,2 +1,3 @@
-# latex_zajecia_-D
-essa prezentacja
+# Repo na zajęcia z latex'a :D
+
+mam zaawansowaną schizofrenie paranoidalną 
