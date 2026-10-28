@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+
+% paczki
+\usepackage[a4paper,margin=1in]{geometry}   % małe marginesy
+\usepackage{amsmath, amssymb, amsthm}       % formatowanie matematyczne
+\usepackage{bm}                             % pogrubione symbole matematyczne
+\usepackage{hyperref}                       % hiperłącza
+\usepackage{graphicx}                       % grafika
+\usepackage{parskip}                        % odstęp między akapitami
+\usepackage{polski}							% polska gurom\
+\usepackage{mathdots}                       % iddots
+
+
+% własne polecenia matematyczne
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+% środowiska twierdzeń
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+% zmiana tytułu sekcji "References" na "Źródła"
+\renewcommand{\refname}{Źródła}
+
+% metadane dokumentu
+\title{\textbf{Przyszłość społeczeństwa przemysłowego i jego konsekwencję}}
+\author{Ted Kaczyński}
+\date{19 września 1995}
+
+\begin{document}
+	
+	\maketitle
+	\newpage
+
+\section*{Wprowadzenie}
+	
+1. Rewolucja przemysłowa i jej następstwa okazały się katastrofą dla rodzaju ludzkiego. Choć znacząco wydłużyła ona życie mieszkańców krajów „rozwiniętych”, to jednocześnie zdestabilizowała społeczeństwo, pozbawiła życie poczucia spełnienia, naraziła ludzi na upokorzenia, stała się przyczyną rozległego cierpienia psychicznego (a w krajach Trzeciego Świata – także fizycznego) oraz wyrządziła ogromne szkody w świecie przyrody. Dalszy rozwój technologii jedynie pogorszy tę sytuację. Z pewnością narazi on ludzi na jeszcze większe upokorzenia i spowoduje dalsze zniszczenia w środowisku naturalnym; prawdopodobnie doprowadzi też do głębszych zaburzeń społecznych i nasilenia cierpienia psychicznego, a nawet – również w krajach „rozwiniętych” – do wzrostu cierpienia fizycznego.
+
+2. System przemysłowo-technologiczny może przetrwać albo ulec załamaniu. Jeśli przetrwa, być może uda mu się ostatecznie ograniczyć cierpienie fizyczne i psychiczne do niskiego poziomu, lecz stanie się to dopiero po długim i niezwykle bolesnym okresie dostosowawczym – i za cenę trwałego przekształcenia ludzi oraz wielu innych organizmów żywych w produkty inżynierii i zwykłe trybiki w maszynie społecznej. Co więcej, w przypadku przetrwania systemu konsekwencje będą nieuniknione: nie istnieje sposób na taką jego reformę czy modyfikację, która uchroniłaby ludzi przed utratą godności i autonomii.
+
+3. Jeśli system ulegnie załamaniu, skutki również będą bardzo bolesne. Jednak im bardziej system się rozrasta, tym bardziej katastrofalne będą następstwa jego upadku; zatem jeśli ma do niego dojść, lepiej, by nastąpił on wcześniej niż później.
+
+4. Postulujemy zatem rewolucję wymierzoną w system przemysłowy. Rewolucja ta może, lecz nie musi, wiązać się z użyciem przemocy; może mieć charakter nagły lub stanowić proces stosunkowo stopniowy, rozciągnięty na kilka dekad. Nie jesteśmy w stanie tego przewidzieć. Nakreślamy jednak – w bardzo ogólnym zarysie – działania, jakie powinni podjąć przeciwnicy systemu przemysłowego, by przygotować grunt pod rewolucję wymierzoną w ten model społeczeństwa. Nie ma to być rewolucja polityczna. Jej celem nie będzie obalenie rządów, lecz zniszczenie ekonomicznych i technologicznych fundamentów współczesnego społeczeństwa. 5. W niniejszym artykule skupiamy się jedynie na wybranych negatywnych zjawiskach wynikających z funkcjonowania systemu przemysłowo-technologicznego. O innych tego typu zjawiskach wspominamy tylko pobieżnie lub pomijamy je całkowicie. Nie oznacza to, że uważamy je za nieistotne. Ze względów praktycznych musimy ograniczyć nasze rozważania do kwestii, które nie spotkały się z wystarczającym zainteresowaniem opinii publicznej lub w odniesieniu do których mamy coś nowego do powiedzenia. Na przykład, skoro istnieją już dobrze rozwinięte ruchy na rzecz ochrony środowiska i dzikiej przyrody, poświęciliśmy niewiele miejsca degradacji środowiska czy niszczeniu dzikiej natury, mimo że uważamy te zagadnienia za niezwykle istotne.
+
+\newpage
+
+\section*{A tutaj całka eulera naura}
+
+Niech $$I = \int_{-\infty}^{\infty} e^{-x^2} dx$$
+
+Wtedy, $$I^2 = \int_{-\infty}^{\infty} e^{-x^2} dx \times \int_{-\infty}^{\infty} e^{-y^2} dy = \int_{-\infty}^{\infty} (\int_{-\infty}^{\infty} e^{-(x^2 + y^2)} dx) dy$$
+\\
+
+Następnie zamieniamy zmienne kartezjańskie na biegunowe
+
+$$x^2 + y^2 = r^2 $$$$ dxdy = dA = rd\theta dr$$
+
+Stąd, 
+
+$$ I^2 = \iint e^{-r^2} rd\theta dr = \int_{0}^{2\pi} (\int_{0}^{\infty} re^{-r^2} dr) d\theta = 2\pi \int_{0}^{\infty} re^{-r^2} dr$$ 
+
+Teraz, podstawmy
+
+$$ u = r^2 $$$$ du = 2rdr$$
+
+Stąd,
+
+$$ 2I^2 = 2\pi \int_{r=0}^{\infty} 2re^{-r^2} dr = 2\pi \int_{u=0}^{\infty} e^{-u} du = 2\pi (-e^{-\infty} + e^{0}) = 2\pi (-0+1) = 2\pi $$ 
+
+Przez to $$ I = \sqrt{\pi}$$
+
+\qed
+
+\newpage
+\section*{warsztaty}
+
+Suma $\sum_{k=1}^{n} k$, czyli suma liczba od 1 do n wynosi $\frac{n(n+1)}{2}$.
+
+$$ \sum_{k=1}^{n} k = \frac{n(n+1)}{2} $$
+
+Sześcian sumy: $$ (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 $$
+\\
+
+Sześcian sumy:
+\begin{equation}
+	(a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 	
+\end{equation}
+\\
+
+Każdą różną od zera liczbę zepsoloną $z = a+bi$ można zapisać w postaci trygonometrycznej
+
+$z = |z|(\cos\phi + i\sin\phi)$, gdzie $\frac{a}{|z|} = \cos\phi$ oraz $\frac{b}{|z|} = \sin\phi$ 
+\\
+
+
+Każdą różną od zera liczbę zepsoloną $z = a+bi$ można zapisać w postaci trygonometrycznej
+
+\begin{equation}
+	z = |z|(\cos\phi + i\sin\phi),\quad \textrm{gdzie}\quad \frac{a}{|z|} = \cos\phi\quad \textrm{oraz}\quad \frac{b}{|z|} = \sin\phi 
+\end{equation}
+
+\[
+{\left( \begin{array}{cccc}
+		\iddots  & {^{\dots}{\dots}^{^{\dots}{\dots}}} & \dots^{\dots^{\dots}} & \ddots\\
+		{^{\vdots}{\vdots}^{^{\vdots}{\vdots}}}  & {^{\ddots}{\ddots}^{^{\ddots}{\ddots}}} & {^{\iddots}{\iddots}^{^{\iddots}{\iddots}}} & \vdots\\
+		\vdots  & {^{\iddots}{\iddots}^{^{\iddots}{\iddots}}} & {^{\ddots}{\ddots}^{^{\ddots}{\ddots}}} & \vdots\\
+		\ddots  & {^{\dots}{\dots}^{^{\dots}{\dots}}}  & {^{\dots}{\dots}^{^{\dots}{\dots}}}  &\iddots 
+	\end{array} \right)}^{{^{\vdots}{\vdots}^{^{\vdots}{\vdots}}}}
+=
+\left[ \begin{array}{ccc}
+	5 & 5\\
+	5 & 10
+\end{array} \right]
+\]
+
+
+
+
+\end{document}
+
+
+
+
+
